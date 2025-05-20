@@ -92,7 +92,6 @@ local function isTargetBlockedByWall(targetPart, targetCharacter)
     local result = workspace:Raycast(origin, direction, raycastParams)
 
     if result then
-        print(`Hit: {result.Instance:GetFullName()}`)
         if result.Instance:IsDescendantOf(targetCharacter) then
             return false -- hit target itself, not blocked
         end
